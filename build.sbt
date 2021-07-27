@@ -16,8 +16,8 @@ inThisBuild(
   )
 )
 
-val akkaVersion = "2.6.15"
-val akkaHttpVersion = "10.2.4"
+val akkaVersion = "2.6.14"
+val akkaHttpVersion = "10.2.5"
 val scalatestVersion = "3.2.9"
 val akka = "com.typesafe.akka" %% "akka-actor" % akkaVersion
 val akkaStream = "com.typesafe.akka" %% "akka-stream" % akkaVersion
@@ -55,7 +55,7 @@ lazy val awsRequests = (project in file("akka-http-aws"))
   .settings(
     name := "akka-http-aws-fork",
     libraryDependencies ++= Seq(
-      "org.scala-lang.modules" %% "scala-collection-compat" % "2.4.4",
+      "org.scala-lang.modules" %% "scala-collection-compat" % "2.5.0",
       akkaHttp,
       akkaStream,
       akkaHttpSprayJson,
