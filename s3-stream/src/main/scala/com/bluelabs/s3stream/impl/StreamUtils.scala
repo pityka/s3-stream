@@ -9,9 +9,11 @@ private[s3stream] object StreamUtils {
     Source.unfold(initial)((i: Int) => Some((i + 1, i)))
   }
 
-  /** The following two methods are copied from https://github.com/MfgLabs/akka-stream-extensions
+  /** The following two methods are copied from
+    * https://github.com/MfgLabs/akka-stream-extensions
     *
-    * Licensed under Apache-2 https://github.com/MfgLabs/akka-stream-extensions/blob/master/LICENSE
+    * Licensed under Apache-2
+    * https://github.com/MfgLabs/akka-stream-extensions/blob/master/LICENSE
     */
   def singleLazyAsync[A](fut: => Future[A]): Source[A, NotUsed] =
     singleLazy(fut).mapAsync(1)(identity)
