@@ -33,7 +33,8 @@ private[s3stream] trait MultipartUploadSupport
   protected def retryRequest(h: HttpRequest, c: Int) =
     retryFuture(singleRequest(h), c)
 
-  /** Uploades a stream of ByteStrings to a specified location as a multipart upload.
+  /** Uploades a stream of ByteStrings to a specified location as a multipart
+    * upload.
     *
     * @param s3Location
     * @param chunkSize
@@ -102,7 +103,8 @@ private[s3stream] trait MultipartUploadSupport
       res <- signAndGetAs[CompleteMultipartUploadResult](req)
     } yield res
 
-  /** Transforms a flow of ByteStrings into a flow of HTTPRequests to upload to S3.
+  /** Transforms a flow of ByteStrings into a flow of HTTPRequests to upload to
+    * S3.
     *
     * @param s3Location
     * @param chunkSize
