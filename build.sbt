@@ -17,15 +17,15 @@ inThisBuild(
 )
 
 val akkaVersion = "2.6.16"
-val akkaHttpVersion = "10.2.7"
+val akkaHttpVersion = "10.2.9"
 val scalatestVersion = "3.2.10"
 val akka = "com.typesafe.akka" %% "akka-actor" % akkaVersion % Provided
-val akkaStream = "com.typesafe.akka" %% "akka-stream" % akkaVersion  % Provided
-val akkaHttp = "com.typesafe.akka" %% "akka-http" % akkaHttpVersion 
+val akkaStream = "com.typesafe.akka" %% "akka-stream" % akkaVersion % Provided
+val akkaHttp = "com.typesafe.akka" %% "akka-http" % akkaHttpVersion
 val akkaTestkit = "com.typesafe.akka" %% "akka-testkit" % akkaVersion
 val akkaStreamTestkit =
   "com.typesafe.akka" %% "akka-stream-testkit" % akkaVersion
-val akkaHttpXML = "com.typesafe.akka" %% "akka-http-xml" % akkaHttpVersion 
+val akkaHttpXML = "com.typesafe.akka" %% "akka-http-xml" % akkaHttpVersion
 val akkaHttpSprayJson =
   "com.typesafe.akka" %% "akka-http-spray-json" % akkaHttpVersion
 val scalatest = "org.scalatest" %% "scalatest" % scalatestVersion
