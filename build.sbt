@@ -22,12 +22,13 @@ val scalatestVersion = "3.2.10"
 val scodecVersion = "1.1.34"
 val scodec = "org.scodec" %% "scodec-bits" % scodecVersion
 val akka = "com.typesafe.akka" %% "akka-actor" % akkaVersion % Provided
-val akkaStream = "com.typesafe.akka" %% "akka-stream" % akkaVersion  % Provided
+val akkaStream = "com.typesafe.akka" %% "akka-stream" % akkaVersion % Provided
 val akkaHttp = "com.typesafe.akka" %% "akka-http" % akkaHttpVersion % Provided
 val akkaTestkit = "com.typesafe.akka" %% "akka-testkit" % akkaVersion
 val akkaStreamTestkit =
   "com.typesafe.akka" %% "akka-stream-testkit" % akkaVersion
-val akkaHttpXML = "com.typesafe.akka" %% "akka-http-xml" % akkaHttpVersion % Provided
+val akkaHttpXML =
+  "com.typesafe.akka" %% "akka-http-xml" % akkaHttpVersion % Provided
 val akkaHttpSprayJson =
   "com.typesafe.akka" %% "akka-http-spray-json" % akkaHttpVersion % Provided
 val scalatest = "org.scalatest" %% "scalatest" % scalatestVersion
@@ -57,7 +58,7 @@ lazy val awsRequests = (project in file("akka-http-aws"))
   .settings(
     name := "akka-http-aws-fork",
     libraryDependencies ++= Seq(
-      "org.scala-lang.modules" %% "scala-collection-compat" % "2.5.0",
+      "org.scala-lang.modules" %% "scala-collection-compat" % "2.12.0",
       akkaHttp,
       scodec,
       akkaStream,
